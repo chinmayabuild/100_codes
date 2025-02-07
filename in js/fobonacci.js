@@ -1,21 +1,23 @@
 function fibonacci(n) {
-    let next, a, b;
+    let next, a, b, count;
     a = 0;
-
     b = 1;
-   if(n < 0){
-    console.log("Enter a Valid Number");
-   }else if(n > 0){
-    console.log(a);
-    console.log(b);
-    for(i = 3; i <= n; i++) {
-        next = a + b;
-        console.log(next);
-        a = b;
-        b = next;
+    count = 0;
+    if (n > 0){
+        while(n > count) {
+        
+            console.log(a);
+            let next = a + b;
+            a = b;
+            b = next;
+            count++;
+        }
+    } else {
+        console.log("no fibonacci number lies")
     }
-   }
-   
+    
 }
 
-fibonacci(5);
+fibonacci(0);
+
+
