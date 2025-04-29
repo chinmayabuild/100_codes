@@ -1,3 +1,4 @@
+ console.log("js is running");
 function fibonacci(n) {
   let next, a, b, i;
   a = 0;
@@ -53,30 +54,21 @@ function fibonacciAtPosition(n) {
 
 // Example usage
 function serialFibonacci(initial, final) {
+
     let a = 0, b = 1, next, count = 1;
 
-    if (initial === 1) console.log(a);
-    if (initial <= 2 && final >= 2) console.log(b);
-
-    while (count < final) {
-        next = a + b;
-        a = b;
-        b = next;
-        count++;
-
-        if (count >= initial && count <= final) {
-            console.log(next);
-        }
-    }
+    let result = [ ];
+     for(let i = 1; i <= final; i++) {
+      if(i >= initial)  {
+        result.push(a);
+      }
+      next = a + b;
+      a = b;
+      b = next;
+     }
+      return result;
 }
+let result = serialFibonacci(1, 10);
 
+console.log(result);
 
-function serielFibbonaccii( innitial, final){
-
-    let a, b, next;
-    a = 0;
-    b = 1;
-
-    
-    
-}
